@@ -1,0 +1,39 @@
+#timer{
+    position: fixed;
+    background-color: #D9534F;
+    width: 900px;
+    height: 200px;
+    top:50%;
+    left:50%;
+    margin-top: -100px;
+    margin-left: -450px;
+    border-radius:5px;
+}
+#time{
+margin-top:30px;
+text-align:center;
+font-family: Arial;
+font-size: 80px;
+color:white;
+}
+
+.button{
+    border: 1px solid white;
+    border-radius: 10px;
+    width:100px;
+    height:30px;
+    color:white;
+    background-color: #D9534F;
+}
+
+.button:hover {
+    background-color: #C9302C;
+}
+
+#start{
+    margin-left:325px;
+}
+
+#stop{
+    margin-left:50px;
+}
