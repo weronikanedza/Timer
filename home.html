@@ -9,9 +9,32 @@
     <script src="timer.js"></script>
 </head>
 <body>
-    <div id="timer">
+    <div class="timer">
         <div id="time">01:00</div>
-        <button class="button" id="start">START</button><button class="button" id="stop">STOP</button>
+        <button class="timer-button" id="start">START</button><button class="timer-button" id="stop">STOP</button>
     </div>
 </body>
 </html>
+
+<!-- 
+Answers:
+
+1.Why positon fixed ?
+Because I wanted to handle it one place, even when i change the size of window. Except that sth breaks when i remove that line
+
+2.Try to use !== 
+This sign means that value and type is checked
+
+Questions:
+
+1.You should never style by id.
+ Why ? I saw examples with id. I thought that you should use id when you are sure that sth will be used only once on site.
+ When Im gonna use time with class then its value doesnt change(error)
+
+ 2.Avoid 1000 next to setInterval
+ Why ? 1000 is one second, I saw that function on stack
+
+ 3.Better use classes than manage colors with js ..
+ I don't understand if you mean classess in css. I will stil have to somehow call it in js .
+
+ -->

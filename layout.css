@@ -1,4 +1,4 @@
-#timer{
+.timer{
     position: fixed;
     background-color: #D9534F;
     width: 900px;
@@ -17,8 +17,8 @@ font-size: 80px;
 color:white;
 }
 
-.button{
-    border: 1px solid white;
+.timer-button{
+    border: 1px solid #FFFFFF;
     border-radius: 10px;
     width:100px;
     height:30px;
@@ -26,7 +26,7 @@ color:white;
     background-color: #D9534F;
 }
 
-.button:hover {
+.timer-button:hover {
     background-color: #C9302C;
 }
 

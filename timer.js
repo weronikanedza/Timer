@@ -1,25 +1,29 @@
 
-var minutes=1;
-var seconds=0;
-var temp;
-var intervalID;
-window.onload = function () {
+ const timeParts={
+    minutes:1,
+    seconds:0,
+    intervalID:null,
+    };
+
+window.onload = function () {        
+
     document.getElementById("start").onclick=function(){
-        intervalID=setInterval(function(){
+        document.getElementById("start").disabled = true;
+         intervalID=setInterval(function(){
          
-            if(seconds==0 && minutes!=0){
-                seconds=59;
-                minutes--;
-            }else if(seconds!=0) {
-                 seconds--;
+            if(timeParts.seconds===0 && timeParts.minutes!==0){
+                timeParts.seconds=59;
+                timeParts.minutes--;
+            }else if(timeParts.seconds!==0) {
+                 timeParts.seconds--;
             }else{
-                document.getElementById("timer").style.backgroundColor="#90EE90";
+                document.getElementsByClassName("timer").style.backgroundColor="#90EE90";
                 document.getElementById("start").style.backgroundColor="#90EE90";
                 document.getElementById("stop").style.backgroundColor="#90EE90";
             }
 
-            temp=(minutes<10)?"0"+minutes+":":minutes+":";
-            temp+=(seconds<10)?"0"+seconds:seconds;
+            var temp=(timeParts.minutes<10)?"0"+timeParts.minutes+":":timeParts.minutes+":";
+            temp+=(timeParts.seconds<10)?"0"+timeParts.seconds:timeParts.seconds;
                 
             document.getElementById("time").innerHTML=temp;
             document.getElementById("start").innerHTML="RESUME";
@@ -27,7 +31,8 @@ window.onload = function () {
     },1000)  
         };
 
-       document.getElementById("stop").onclick=function(){
+        document.getElementById("stop").onclick=function(){
+        document.getElementById("start").disabled = false;
         clearInterval(intervalID);
        };
 }
