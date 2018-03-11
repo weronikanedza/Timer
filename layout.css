@@ -9,7 +9,7 @@
     margin-left: -450px;
     border-radius:5px;
 }
-#time{
+.timeStyle{
 margin-top:30px;
 text-align:center;
 font-family: Arial;
@@ -30,10 +30,10 @@ color:white;
     background-color: #C9302C;
 }
 
-#start{
+.start{
     margin-left:325px;
 }
 
-#stop{
+.stop{
     margin-left:50px;
 }
